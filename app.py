@@ -51,7 +51,7 @@ def prediction():
             prediction = model.predict(data)
             index = np.argmax(prediction)
             class_names = labels[index]
-            class_names = class_names[2:]
+            class_names = class_names[3:]
             confidence_score = prediction[0][index]
 
             return jsonify({
