@@ -20,15 +20,9 @@ with open("labels.txt", "r") as file:
 
 @app.route("/")
 def index():
-    return jsonify({
-        "status": {
-            "code": 200,
-            "message": "Success",
-        },
-        "data": None
-    }), 200
+    return "Success Fetching"
 
-@app.route("/prediction", methods=["GET", "POST"])
+@app.route("/prediction", methods=["POST"])
 def prediction():
     if request.method == "POST":
         image = request.files["image"]
