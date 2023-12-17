@@ -22,7 +22,7 @@ with open("labels.txt", "r") as file:
 def index():
     return "Success Fetching"
 
-@app.route("/prediction", methods=["POST"])
+@app.route("/prediction", methods=["GET","POST"])
 def prediction():
     if request.method == "POST":
         image = request.files["image"]
